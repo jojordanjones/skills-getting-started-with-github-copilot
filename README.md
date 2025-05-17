@@ -14,3 +14,7 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
+## New Feature
+
+This repository now includes a simple web-based tool for transcribing audio files using OpenAI models. After starting the FastAPI app, open `/static/transcribe.html` to upload an audio file and receive a transcript.
+
