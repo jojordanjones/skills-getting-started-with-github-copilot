@@ -6,19 +6,20 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 - View all available extracurricular activities
 - Sign up for activities
+- Transcribe audio files using OpenAI's Whisper model
 
 ## Getting Started
 
 1. Install the dependencies:
 
-   ```
-   pip install fastapi uvicorn
+   ```bash
+   pip install -r ../requirements.txt
    ```
 
-2. Run the application:
+2. Run the application with Uvicorn:
 
-   ```
-   python app.py
+   ```bash
+   uvicorn app:app --reload
    ```
 
 3. Open your browser and go to:
@@ -31,6 +32,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| POST   | `/transcribe`                                                     | Upload an audio file and receive a transcript using OpenAI          |
 
 ## Data Model
 
