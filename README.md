@@ -1,16 +1,30 @@
-# Getting Started with GitHub Copilot
+# Tech Joint
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+A simple demo web application for uploading audio files and transcribing them with OpenAI's Whisper model.
 
-Hey @jojordanjones!
+## Setup
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+1. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Install [ffmpeg](https://ffmpeg.org/) for audio conversion. On Ubuntu you can run:
+   ```bash
+   sudo apt-get update && sudo apt-get install ffmpeg
+   ```
+3. Export your OpenAI API key:
+   ```bash
+   export OPENAI_API_KEY=YOUR_KEY_HERE
+   ```
+4. Start the application:
+   ```bash
+   uvicorn src.app:app --reload
+   ```
 
-Remember, it's self-paced so feel free to take a break! ☕️
+Open [http://localhost:8000/static/index.html](http://localhost:8000/static/index.html) in your browser.
+Use the microphone icon under **Tools** to access the transcription page.
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/jojordanjones/skills-getting-started-with-github-copilot/issues/1)
+## Features
 
----
-
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
+- Landing page shows available activities and a tools section.
+- Audio transcription tool converts unsupported types to MP3 before sending to OpenAI.
