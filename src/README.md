@@ -11,14 +11,16 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 1. Install the dependencies:
 
+   ```bash
+   pip install -r ../requirements.txt
    ```
-   pip install fastapi uvicorn
-   ```
+
+   `pydub` requires `ffmpeg` for converting unsupported audio files.
 
 2. Run the application:
 
-   ```
-   python app.py
+   ```bash
+   uvicorn app:app --reload
    ```
 
 3. Open your browser and go to:
@@ -31,6 +33,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| POST   | `/transcribe`                                                     | Upload an audio file and receive a transcript                        |
 
 ## Data Model
 

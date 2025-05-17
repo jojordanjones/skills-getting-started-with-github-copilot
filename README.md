@@ -14,3 +14,29 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
+## New Feature
+
+This repository now includes a simple web-based tool for transcribing audio files using OpenAI models. After starting the FastAPI app, open `/static/transcribe.html` to upload an audio file and receive a transcript.
+
+### Running the server
+
+1. Install the Python dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Install `ffmpeg` if you want to transcribe files that are not in one of OpenAI's supported formats (`mp3`, `mp4`, `mpeg`, `mpga`, `m4a`, `wav`, or `webm`). The application uses `pydub` to convert unsupported files, which requires `ffmpeg` to be available on your system.
+
+3. Export your OpenAI API key:
+
+   ```bash
+   export OPENAI_API_KEY=your-key-here
+   ```
+
+4. Launch the server:
+
+   ```bash
+   uvicorn src.app:app --reload
+   ```
+
