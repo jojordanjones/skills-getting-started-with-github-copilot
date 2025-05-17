@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Transcription</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Audio Transcription</h1>
+    </header>
+    <main>
+      <section>
+        <h3>Upload Audio</h3>
+        <form id="transcribe-form">
+          <div class="form-group">
+            <input type="file" id="audio" accept="audio/*" required />
+          </div>
+          <button type="submit">Transcribe</button>
+        </form>
+        <pre id="transcript" class="message hidden"></pre>
+      </section>
+    </main>
+    <script src="transcribe.js"></script>
+  </body>
+</html>
